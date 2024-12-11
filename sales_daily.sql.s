@@ -3,7 +3,7 @@
 SELECT 
  date_date,
  ROUND(SUM(turnover)) AS total_turnover,
- ROUND(SUM(purchase_cost)) AS total_purchase_cost
+ ROUND(SUM(turnover)) - ROUND(SUM(purchase_cost)) AS total_margin
  FROM `peppy-appliance-438410-e5.course_15.gwz_sales` 
  GROUP BY date_date
  ORDER BY date_date 
